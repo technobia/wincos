@@ -12,7 +12,7 @@ define(function(require) {
     }
 
     HomeController.prototype.onLoad = function() {
-        console.log('Mother Fucker! Welcome to the first');
+        console.log('Welcome to the first');
     };
 
     return HomeController;

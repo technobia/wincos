@@ -1,5 +1,5 @@
 <div ng-include="'templates/header.html'"></div>
-<div class="container-fluid home-side padding-none" ng-controller="HomeController">
+<div class="container-fluid home-side padding-none" ng-controller="HomeController" ng-init="event.onLoad()">
     <div class="container-fluid home-carousel padding-none">
         <div class="container">
             <div class="carousel slide" id="home-carousel">
@@ -23,6 +23,22 @@
                 <a class="right carousel-control" href="#home-carousel" data-slide="next">
                     <span class="fa fa-angle-right" aria-hidden="true"></span>
                 </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="why-wincos">
+            <div class="wincos-title">
+                <span class="wincos-title-text">Why WINCOS</span>
+            </div>
+            <div class="left">
+                <img src="assets/images/logo.jpg" height="50"/>
+                <p>
+                    Wincos là nhà sản xuất hàng đầu Nhật Bản trong lĩnh vực sản xuất vật liệu kết dính. Chúng tôi là những người đầu tiên trong ngành công nghiệp đầy áp lực nhạy cảm với việc đổi mới trong việc sử dụng công nghệ bức xạ hồng ngoại  hop him cách nhiệt ô tô ...
+                </p>
+                <div>
+                    <a href="#/" class="btn btn-sm btn-info">Chi tiết <span class="fa fa-angle-right"></span></a>
+                </div>
             </div>
         </div>
     </div>
