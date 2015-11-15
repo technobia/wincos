@@ -11,6 +11,6 @@ define(function(require) {
 
     app.config(config);
 
-    var IndexController = require('controllers/IndexController');
-    app.controller('IndexController', IndexController);
+    var HomeController = require('controllers/HomeController');
+    app.controller('HomeController', HomeController);
 });
