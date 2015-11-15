@@ -51,14 +51,11 @@
 }
 
 .why-wincos {
-  .make-xs-column(12, 0);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background: @why-wincos no-repeat right;
-  background-size: auto 100%;
+  .section;
 
   .left {
-    .make-xs-column(6, 0);
+    .make-sm-column(6, 0);
+    .make-sm-column-offset(1);
 
     p {
       padding-top: 10px;
@@ -66,12 +63,28 @@
       font-size: 13px;
     }
   }
+
+  .right {
+    .make-sm-column(5, 0);
+
+    img {
+      max-height: 170px;
+    }
+  }
+}
+
+.section {
+  .make-xs-column(12, 0);
+  padding-top: 30px;
+  padding-bottom: 70px;
 }
 
 .wincos-title {
   .make-xs-column(12, 0);
+  display: block;
 
   &-text {
+    display: block;
     font-size: 18px;
     font-weight: bold;
     padding: 10px 0 10px 20px;
