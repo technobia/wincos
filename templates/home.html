@@ -1,4 +1,29 @@
 <div ng-include="'templates/header.html'"></div>
-<div ng-controller="HomeController">
+<div class="container-fluid home-side padding-none" ng-controller="HomeController">
+    <div class="container-fluid home-carousel padding-none">
+        <div class="container">
+            <div class="carousel slide" id="home-carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#home-carousel" data-slide-to="1"></li>
+                    <li data-target="#home-carousel" data-slide-to="2"></li>
+                    <li data-target="#home-carousel" data-slide-to="3"></li>
+                </ol>
 
+                <div class="carousel-inner">
+                    <div class="item active"><div class="pic block-01"></div></div>
+                    <div class="item"><div class="pic block-02"></div></div>
+                    <div class="item"><div class="pic block-03"></div></div>
+                    <div class="item"><div class="pic block-04"></div></div>
+                </div>
+
+                <a class="left carousel-control" href="#home-carousel" data-slide="prev">
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="#home-carousel" data-slide="next">
+                    <span class="fa fa-angle-right" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

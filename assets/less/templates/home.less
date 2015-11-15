@@ -1,0 +1,51 @@
+.home-side {
+  .home-carousel {
+    min-height: 450px;
+    background: @home-carousel center center;
+
+    .carousel {
+      &-inner {
+        height: 450px;
+      }
+
+      &-control {
+        background: none;
+
+        .fa {
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          margin-top: -45px;
+          font-size: 90px;
+        }
+      }
+
+      .item {
+        height: 100%;
+      }
+
+      .pic {
+        display: block;
+        height: 100%;
+        background: no-repeat top center;
+        background-size: auto 100%;
+      }
+
+      .block-01 {
+        background-image: @carousel-block-01;
+      }
+
+      .block-02 {
+        background-image: @carousel-block-02;
+      }
+
+      .block-03 {
+        background-image: @carousel-block-03;
+      }
+
+      .block-04 {
+        background-image: @carousel-block-04;
+      }
+    }
+  }
+}
