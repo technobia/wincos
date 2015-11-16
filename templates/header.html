@@ -1,4 +1,4 @@
-<div class="container-fluid top-side padding-none">
+<div class="container-fluid top-side padding-none" ng-controller="HeaderController" ng-init="event.onLoad()">
     <div class="container">
         <div class="navbar-logo">
             <a href="#/"><img src="assets/images/logo.jpg"/></a>
@@ -14,10 +14,10 @@
             </div>
             <div class="navbar-menu">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="javascript:void(0);">Trang chủ</a></li>
-                    <li><a href="javascript:void(0);">Lý Do Chọn Wincos</a></li>
-                    <li><a href="javascript:void(0);">Phim Dán Kiến Trúc</a></li>
-                    <li><a href="javascript:void(0);">Liên hệ</a></li>
+                    <li ng-class="{'active': data.selected === 0}"><a ng-click="event.updateSelected(0)" href="#/">Trang chủ</a></li>
+                    <li ng-class="{'active': data.selected === 1}"><a ng-click="event.updateSelected(1)" href="#/why-wincos">Lý Do Chọn Wincos</a></li>
+                    <li ng-class="{'active': data.selected === 2}"><a ng-click="event.updateSelected(2)" href="javascript:void(0);">Phim Dán Kiến Trúc</a></li>
+                    <li ng-class="{'active': data.selected === 3}"><a ng-click="event.updateSelected(3)" href="javascript:void(0);">Liên hệ</a></li>
                 </ul>
             </div>
         </div>

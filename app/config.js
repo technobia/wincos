@@ -12,8 +12,8 @@ define(function() {
             .when('/', {
                 templateUrl: 'templates/home.html'
             })
-            .when('/test', {
-                templateUrl: 'templates/test.html'
+            .when('/why-wincos', {
+                templateUrl: 'templates/why-wincos.html'
             })
             .otherwise({
                 templateUrl: 'templates/home.html'

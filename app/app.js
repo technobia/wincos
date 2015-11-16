@@ -13,4 +13,7 @@ define(function(require) {
 
     var HomeController = require('controllers/HomeController');
     app.controller('HomeController', HomeController);
+
+    var HeaderController = require('controllers/HeaderController');
+    app.controller('HeaderController', HeaderController);
 });
