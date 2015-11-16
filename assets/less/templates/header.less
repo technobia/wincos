@@ -28,15 +28,16 @@
         float: none;
         display: inline-block;
         padding: 0 10px;
-        color: @color-darkgray;
 
-        span {
+        a {
+          color: @color-darkgray;
           display: inline-block;
           padding-bottom: 3px;
+          background: none;
         }
 
         &:hover, &.active {
-          span {
+          a {
             border-bottom: 1px solid @brand-primary;
           }
         }

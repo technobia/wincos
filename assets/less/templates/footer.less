@@ -1,0 +1,42 @@
+.footer-side {
+  background: #f3f3f3 @devine center top no-repeat;
+  min-height: 70px;
+}
+
+.footer-body {
+  padding-top: 15px;
+
+  .copyright {
+    .make-xs-column(6, 0);
+    font-size: 11px;
+    color: @color-gray;
+  }
+
+  .right {
+    .make-xs-column(6, 0);
+  }
+
+  .list-inline {
+    margin: 0;
+    text-align: right;
+
+    li {
+      font-size: 11px;
+      padding: 0 15px;
+
+      & + li {
+        border-left: 1px solid @color-gray;
+      }
+
+      a {
+        color: @color-gray;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
