@@ -12,7 +12,7 @@ define(function(require) {
     }
 
     HomeController.prototype.onLoad = function() {
-        console.log('Welcome to the first');
+
     };
 
     return HomeController;

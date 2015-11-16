@@ -25,10 +25,25 @@ define(function(require) {
                 this.data.selected = 0;
                 break;
         }
+        this.initMinHeightMainSide();
     };
 
     HeaderController.prototype.updateSelected = function(number) {
         this.data.selected = number;
+        this.initMinHeightMainSide();
+    };
+
+    HeaderController.prototype.initMinHeightMainSide = function() {
+        var documentElement = $(window);
+        var prev = documentElement.length;
+        var inteval = setInterval(function() {
+            if (prev === documentElement.length) {
+                var height = documentElement.height() - 104 - 70;
+                $('.main-side').css({height: height});
+                clearInterval(inteval);
+            }
+            prev = documentElement.length;
+        }, 100);
     };
 
     return HeaderController;
