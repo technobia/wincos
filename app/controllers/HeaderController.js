@@ -16,6 +16,9 @@ define(function(require) {
             case 'templates/why-wincos.html':
                 this.data.selected = 1;
                 break;
+            case 'templates/architectural-film.html':
+                this.data.selected = 2;
+                break;
 
             case 'templates/home.html':
                 this.data.selected = 0;
@@ -39,7 +42,7 @@ define(function(require) {
         var inteval = setInterval(function() {
             if (prev === documentElement.length) {
                 var height = documentElement.height() - 104 - 70;
-                $('.main-side').css({height: height});
+                $('.main-side').css({'min-height': height});
                 clearInterval(inteval);
             }
             prev = documentElement.length;

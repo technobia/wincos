@@ -16,4 +16,7 @@ define(function(require) {
 
     var HeaderController = require('controllers/HeaderController');
     app.controller('HeaderController', HeaderController);
+
+    var ArchitecturalController = require('controllers/ArchitecturalController');
+    app.controller('ArchitecturalController', ArchitecturalController);
 });

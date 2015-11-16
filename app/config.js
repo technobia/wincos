@@ -15,6 +15,9 @@ define(function() {
             .when('/why-wincos', {
                 templateUrl: 'templates/why-wincos.html'
             })
+            .when('/architectural-film', {
+                templateUrl: 'templates/architectural-film.html'
+            })
             .otherwise({
                 templateUrl: 'templates/home.html'
             });
