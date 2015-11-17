@@ -1,12 +1,12 @@
-<footer class="container-fluid padding-none footer-side">
+<footer class="container-fluid padding-none footer-side" ng-controller="HeaderController" ng-init="event.onLoad()">
     <div class="container footer-body">
         <div class="copyright">Copyright &copy; 2015.</div>
         <div class="right">
             <ul class="list-inline">
-                <li><a href="#/">Trang chủ</a></li>
-                <li><a href="#/why-wincos">Lý Do Chọn Wincos</a></li>
-                <li><a href="javascript:void(0);">Phim Dán Kiến Trúc</a></li>
-                <li><a href="javascript:void(0);">Liên hệ</a></li>
+                <li><a href="#/" ng-click="event.updateSelected(0)">Trang chủ</a></li>
+                <li><a href="#/why-wincos" ng-click="event.updateSelected(1)">Lý Do Chọn Wincos</a></li>
+                <li><a href="#/architectural-film" ng-click="event.updateSelected(2)">Phim Dán Kiến Trúc</a></li>
+                <li><a href="javascript:void(0);" ng-click="event.updateSelected(3)">Liên hệ</a></li>
             </ul>
             <div class="pull-right"><img src="assets/images/logo-small-trans.png" alt=""/></div>
         </div>
