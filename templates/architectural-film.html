@@ -13,15 +13,16 @@
             </div>
             <div class="list-tab">
                 <ul class="nav nav-pills nav-stacked">
-                    <li ng-class="{'active': data.selected === 0}"><a ng-click="event.updateSelected(0)" href="javascript:void(0);">An Toàn & An Ninh</a></li>
-                    <li ng-class="{'active': data.selected === 1}"><a ng-click="event.updateSelected(1)" href="javascript:void(0);">Kiểm Soát Ánh Nắng</a></li>
-                    <li ng-class="{'active': data.selected === 2}"><a ng-click="event.updateSelected(2)" href="javascript:void(0);">Chống Côn Trùng</a></li>
-                    <li ng-class="{'active': data.selected === 3}"><a ng-click="event.updateSelected(3)" href="javascript:void(0);">Chống Phản Chiếu – Chói</a></li>
+                    <li ng-class="{'active': data.selected === 'one'}"><a ng-click="event.updateSelected('one')" href="javascript:void(0);">An Toàn & An Ninh</a></li>
+                    <li ng-class="{'active': data.selected === 'two'}"><a ng-click="event.updateSelected('two')" href="javascript:void(0);">Kiểm Soát Ánh Nắng</a></li>
+                    <li ng-class="{'active': data.selected === 'three'}"><a ng-click="event.updateSelected('three')" href="javascript:void(0);">Chống Côn Trùng</a></li>
+                    <li ng-class="{'active': data.selected === 'four'}"><a ng-click="event.updateSelected('four')" href="javascript:void(0);">Chống Phản Chiếu – Chói</a></li>
                 </ul>
             </div>
         </div>
         <div class="right">
-            <div ng-include="'templates/partial-architectural-default.html'"></div>
+            <div ng-include="'templates/partial-architectural-default.html'" ng-if="!data.selected"></div>
+            <div ng-include="'templates/partial-architectural-safe-security.html'" ng-if="data.selected === 'one'"></div>
         </div>
     </div>
 </div>
