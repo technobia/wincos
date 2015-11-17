@@ -13,6 +13,26 @@
   }
 
   .architectural-content {
+    p {
+      font-size: 13px;
+    }
 
+    .text-underline {
+      text-decoration: underline;
+    }
+
+    .pre {
+      padding: 15px;
+      border: 1px solid;
+      font-size: 16px;
+      font-style: italic;
+      margin-bottom: 12px;
+
+      &-success {
+        background: @state-success-bg;
+        border-color: @state-success-border;
+        color: @state-success-text;
+      }
+    }
   }
 }
