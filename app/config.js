@@ -18,6 +18,9 @@ define(function() {
             .when('/architectural-film', {
                 templateUrl: 'templates/architectural-film.html'
             })
+            .when('/contact-us', {
+                templateUrl: 'templates/contact-us.html'
+            })
             .otherwise({
                 templateUrl: 'templates/home.html'
             });
