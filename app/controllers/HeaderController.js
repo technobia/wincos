@@ -1,10 +1,11 @@
 define(function(require) {
     'use strict';
 
-    function HeaderController($scope, $route) {
+    function HeaderController($scope, $route, $rootScope) {
         this.data = $scope.data = {};
         this.event = $scope.event = {};
         this.$route = $route;
+        this.$rootScope = $rootScope;
 
         this.event.onLoad = this.onLoad.bind(this);
         this.event.updateSelected = this.updateSelected.bind(this);
@@ -29,6 +30,13 @@ define(function(require) {
                 break;
         }
         this.initMinHeightMainSide();
+        this.subcribeUpdateSelected();
+    };
+
+    HeaderController.prototype.subcribeUpdateSelected = function() {
+        this.$rootScope.$on('updateSelected', function(event, data) {
+            this.updateSelected(data);
+        }.bind(this));
     };
 
     HeaderController.prototype.updateSelected = function(number) {

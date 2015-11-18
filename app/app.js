@@ -17,6 +17,9 @@ define(function(require) {
     var HeaderController = require('controllers/HeaderController');
     app.controller('HeaderController', HeaderController);
 
+    var FooterController = require('controllers/FooterController');
+    app.controller('FooterController', FooterController);
+
     var ArchitecturalController = require('controllers/ArchitecturalController');
     app.controller('ArchitecturalController', ArchitecturalController);
 });
