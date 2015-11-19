@@ -101,10 +101,15 @@
   }
 
   &-box {
-    .make-xs-column(4, 30px);
+    .make-xs-column(12, 30px);
+    .make-md-column(4, 30px);
 
     & + .home-product-box {
       background: @line-box no-repeat left 60px;
+
+      @media (max-width: @screen-xs-min) {
+        background: none;
+      }
     }
 
     .pic {

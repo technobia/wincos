@@ -1,24 +1,35 @@
 <div class="container-fluid top-side padding-none" ng-controller="HeaderController" ng-init="event.onLoad()">
     <div class="container">
         <div class="navbar-logo">
-            <a href="#/"><img src="assets/images/logo.jpg"/></a>
+            <a href="#/" class="hidden-xs"><img src="assets/images/logo.jpg"/></a>
+            <a href="#/" class="visible-xs"><img src="assets/images/logo-small-trans.png"/></a>
+        </div>
+        <div class="icon-collapse pull-right">
+            <button type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#top-menu">
+                <span class="fa fa-bars"></span>
+            </button>
         </div>
         <div class="navbar-right-block">
-            <div class="navbar-search">
+            <div class="navbar-search hidden-xs">
                 <div class="input-group input-group-sm">
                     <input class="form-control" type="text" placeholder="Tìm kiếm"/>
-            <span class="input-group-btn">
-                <button class="btn btn-danger"><i class="fa fa-search"></i></button>
-            </span>
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger"><i class="fa fa-search"></i></button>
+                    </span>
                 </div>
             </div>
-            <div class="navbar-menu">
-                <ul class="nav navbar-nav">
-                    <li ng-class="{'active': data.selected === 0}"><a ng-click="event.updateSelected(0)" href="#/">Trang chủ</a></li>
-                    <li ng-class="{'active': data.selected === 1}"><a ng-click="event.updateSelected(1)" href="#/why-wincos">Lý Do Chọn Wincos</a></li>
-                    <li ng-class="{'active': data.selected === 2}"><a ng-click="event.updateSelected(2)" href="#/architectural-film">Phim Dán Kiến Trúc</a></li>
-                    <li ng-class="{'active': data.selected === 3}"><a ng-click="event.updateSelected(3)" href="#/contact-us">Liên hệ</a></li>
-                </ul>
+            <div class="collapse navbar-collapse" id="top-menu">
+                <div class="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{'active': data.selected === 0}"><a ng-click="event.updateSelected(0)" href="#/">Trang chủ</a></li>
+                        <li ng-class="{'active': data.selected === 1}"><a ng-click="event.updateSelected(1)" href="#/why-wincos">Lý Do Chọn Wincos</a></li>
+                        <li ng-class="{'active': data.selected === 2}"><a ng-click="event.updateSelected(2)" href="#/architectural-film">Phim Dán Kiến Trúc</a></li>
+                        <li ng-class="{'active': data.selected === 3}"><a ng-click="event.updateSelected(3)" href="#/contact-us">Liên hệ</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
